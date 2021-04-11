@@ -3,8 +3,12 @@
 
   :duct.router/ataraxy
   {:routes {[:get "/example"] [:film-ratings.handler/example]
+            [:get "/add-film"] [:film-ratings.handler.film/show-create]
+            [:post "/add-film" {film-form :form-params}] [:film-ratings.handler.film/create film-form]
             [:get "/"] [:film-ratings.handler/index]}}
 
+  :film-ratings.handler.film/show-create {}
+  :film-ratings.handler.film/create {:db #ig/ref :duct.database/sql}
   :film-ratings.handler/example {:db #ig/ref :duct.database/sql}
   :film-ratings.handler/index {}
 
