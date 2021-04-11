@@ -1,6 +1,6 @@
 # film-ratings
 
-FIXME: description
+My first attempt at building a clojure web application
 
 ## Developing
 
@@ -64,7 +64,3 @@ But you can also run tests through Leiningen.
 ```sh
 lein test
 ```
-
-## Legal
-
-Copyright © 2021 FIXME
